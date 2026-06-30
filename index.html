@@ -11,6 +11,14 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'AW-18287674166');
+      // Google Ads Conversion — WhatsApp Click (Sign-up)
+      function trackWhatsAppConversion() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18287674166/vG30CLugtcgcELaGn5BE',
+          'value': 1.0,
+          'currency': 'HKD'
+        });
+      }
     </script>
     <title>芊御 Garden Regency — 元朗錦田低密度奢華住宅 | 566伙 · ICC 62/F 示範單位</title>
     <meta name="description" content="芊御 Garden Regency — 新鴻基地產元朗錦田低密度都會住宅。3座14層共566伙，一房至三房及特色戶，逾10萬呎園林會所，示範單位設於ICC 62/F。WhatsApp預約參觀：85284819473。">
@@ -1259,6 +1267,20 @@ document.querySelectorAll('.fact-card, .unit-card, .showflat-card-item, .club-ca
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'all 0.6s ease-out';
     observer.observe(el);
+});
+</script>
+
+<!-- Google Ads WhatsApp Click Conversion Tracking -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var waLinks = document.querySelectorAll('a[href*="wa.me"]');
+    waLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            if (typeof trackWhatsAppConversion === 'function') {
+                trackWhatsAppConversion();
+            }
+        });
+    });
 });
 </script>
 
