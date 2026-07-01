@@ -855,46 +855,164 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "RealEstateListing",
-      "name": "芊御 Garden Regency",
-      "description": "新鴻基地產元朗錦田低密度都會住宅，3座14層共566伙，一房至三房及特色戶，逾10萬呎園林會所。示範單位設於ICC 62/F。",
-      "url": "https://gardenregencyhk.com/",
-      "image": "https://gardenregencyhk.com/images/00003029-PHOTO-2026-06-29-11-31-12.jpg",
-      "datePosted": "2026-06-30",
-      "offers": {
-        "@type": "Offer",
-        "businessFunction": "https://purl.org/goodrelations/v1#LeaseOut",
-        "availability": "https://schema.org/InStock"
-      },
-      "provider": {
-        "@type": "RealEstateAgent",
-        "name": "我們地產專家",
-        "telephone": "+85284819473",
-        "areaServed": {
-          "@type": "City",
-          "name": "屯門"
+      "@graph": [
+        {
+          "@type": "RealEstateListing",
+          "name": "芊御 Garden Regency",
+          "description": "新鴻基地產元朗錦田低密度都會住宅，3座14層共566伙，一房至三房及特色戶，逾10萬呎園林會所。示範單位設於ICC 62/F。",
+          "url": "https://gardenregencyhk.com/",
+          "image": "https://gardenregencyhk.com/images/00003029-PHOTO-2026-06-29-11-31-12.jpg",
+          "datePosted": "2026-06-30",
+          "offers": {
+            "@type": "Offer",
+            "businessFunction": "https://purl.org/goodrelations/v1#LeaseOut",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "HKD",
+            "url": "https://gardenregencyhk.com/price"
+          },
+          "provider": {
+            "@type": "RealEstateAgent",
+            "name": "我們地產專家",
+            "telephone": "+85284819473",
+            "areaServed": "屯門",
+            "url": "https://gardenregencyhk.com"
+          },
+          "location": {
+            "@type": "Place",
+            "name": "芊御 Garden Regency",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "映河路1A號",
+              "addressLocality": "元朗錦田",
+              "addressRegion": "新界",
+              "addressCountry": "HK"
+            }
+          },
+          "numberOfUnits": 566,
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "name": "主打兩房約400呎"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://gardenregencyhk.com/"
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "芊御 Garden Regency — 我們地產專家",
+          "description": "新鴻基地產員提供錦田低密度住宅項目，示範單位設於ICC 62/F。提供專業樓盤咨詢及預約參觀服務。",
+          "url": "https://gardenregencyhk.com",
+          "telephone": "+85284819473",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "柯士甸道西1號ICC 62/F",
+            "addressLocality": "尖沙咀",
+            "addressRegion": "九龍",
+            "addressCountry": "HK"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "22.3032",
+            "longitude": "114.1617"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "09:00",
+              "closes": "20:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Saturday", "Sunday", "PublicHolidays"],
+              "opens": "10:00",
+              "closes": "18:00"
+            }
+          ],
+          "sameAs": [
+            "https://www.instagram.com/gardenregency/",
+            "https://wa.me/85284819473"
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首頁",
+              "item": "https://gardenregencyhk.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "價單",
+              "item": "https://gardenregencyhk.com/price"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "樓市分析",
+              "item": "https://gardenregencyhk.com/blog"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "芊御 Garden Regency 的示範單位在哪裡？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "示範單位設於九龍尖沙咀柯士甸道西1號 ICC（環球貿易廣場）62樓。現已開放參觀，歡迎預約。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "芊御有多少伙？有哪些戶型？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "芊御共設有566伙，分佈於3座14層住宅大樓。戶型包括：一房約290呎（約9%）、兩房約400呎（約70%，主打）、三房約500-560呎（約9%）、特色戶（約12%）。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "芊御的樓底高度是多少？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "芊御的標準樓底高度達3.5米，比一般住宅（約2.8-3米）更高，空間感更寬敞奢華。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "芊御的會所設施有哪些？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "逾10.6萬呎園林會所，設有48項設施，包括33米室外泳池、24小時健身室、600米緩跑徑、健身工作室、宴會廳、兒童遊樂區、燒烤場等。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "如何預約參觀示範單位？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "歡迎透過 WhatsApp（8481 9473）預約參觀示範單位。我們地產專家將為您安排專屬參觀時段，並提供詳細樓盤介紹及售樓資料。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "芊御的關鍵日期（預計入伙日期）是什麼時候？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "芊御的預計關鍵日期為2027年5月17日。實際入伙日期以發展商及正式銷售文件最新公布為準。"
+              }
+            }
+          ]
         }
-      },
-      "location": {
-        "@type": "Place",
-        "name": "芊御 Garden Regency",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "映河路1A號",
-          "addressLocality": "元朗錦田",
-          "addressRegion": "新界",
-          "addressCountry": "HK"
-        }
-      },
-      "numberOfUnits": 566,
-      "floorSize": {
-        "@type": "QuantitativeValue",
-        "name": "主打兩房約400呎"
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://gardenregencyhk.com/"
-      }
+      ]
     }
     </script>
 </head>
@@ -1194,6 +1312,60 @@
             認可人士：黃嘉敏 · 認可人士以其專業身份擔任經營人、董事或僱員的商號或法團：新鴻基建築設計有限公司 · 
             建築承建商：新輝建築有限公司 · 賣方就地產代理的委任：美聯物業 · 
             </p>
+    </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="faq-section" id="faq" style="background:linear-gradient(180deg, rgba(13,40,24,0.95) 0%, rgba(10,31,18,0.98) 100%); padding:5rem 2rem;">
+    <div class="section-inner" style="max-width:900px; margin:0 auto;">
+        <div class="section-tag" style="color:var(--gold); font-size:0.75rem; letter-spacing:0.3em; text-transform:uppercase; margin-bottom:1rem;">FAQ</div>
+        <h2 class="section-title" style="font-family:'Noto Serif TC', serif; font-size:2.2rem; color:var(--gold); margin-bottom:1rem;">常見問題</h2>
+        <p class="section-desc" style="color:rgba(160,152,136,0.8); margin-bottom:3rem;">關於芊御 Garden Regency 的常見查詢</p>
+        
+        <div class="faq-list" style="text-align:left;">
+            <div class="faq-item" style="background:rgba(201,168,76,0.05); border:1px solid rgba(201,168,76,0.15); border-radius:12px; padding:1.5rem; margin-bottom:1rem; cursor:pointer;" onclick="this.classList.toggle('active')">
+                <h3 style="color:var(--gold-light); font-size:1rem; margin-bottom:0.5rem;">❓ 芊御 Garden Regency 的示範單位在哪裡？</h3>
+                <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6; display:none;" class="faq-answer">示範單位設於九龍尖沙咀柯士甸道西1號 ICC（環球貿易廣場）62樓。現已開放參觀，歡迎預約。</p>
+            </div>
+            
+            <div class="faq-item" style="background:rgba(201,168,76,0.05); border:1px solid rgba(201,168,76,0.15); border-radius:12px; padding:1.5rem; margin-bottom:1rem; cursor:pointer;" onclick="this.classList.toggle('active')">
+                <h3 style="color:var(--gold-light); font-size:1rem; margin-bottom:0.5rem;">❓ 芊御有多少伙？有哪些戶型？</h3>
+                <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6; display:none;" class="faq-answer">芊御共設有566伙，分佈於3座14層住宅大樓。戶型包括：一房約290呎（約9%）、兩房約400呎（約70%，主打）、三房約500-560呎（約9%）、特色戶（約12%）。</p>
+            </div>
+            
+            <div class="faq-item" style="background:rgba(201,168,76,0.05); border:1px solid rgba(201,168,76,0.15); border-radius:12px; padding:1.5rem; margin-bottom:1rem; cursor:pointer;" onclick="this.classList.toggle('active')">
+                <h3 style="color:var(--gold-light); font-size:1rem; margin-bottom:0.5rem;">❓ 芊御的樓底高度是多少？</h3>
+                <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6; display:none;" class="faq-answer">芊御的標準樓底高度達3.5米，比一般住宅（約2.8-3米）更高，空間感更寬敞奢華。</p>
+            </div>
+            
+            <div class="faq-item" style="background:rgba(201,168,76,0.05); border:1px solid rgba(201,168,76,0.15); border-radius:12px; padding:1.5rem; margin-bottom:1rem; cursor:pointer;" onclick="this.classList.toggle('active')">
+                <h3 style="color:var(--gold-light); font-size:1rem; margin-bottom:0.5rem;">❓ 芊御的會所設施有哪些？</h3>
+                <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6; display:none;" class="faq-answer">逾10.6萬呎園林會所，設有48項設施，包括33米室外泳池、24小時健身室、600米緩跑徑、健身工作室、宴會廳、兒童遊樂區、燒烤場等。</p>
+            </div>
+            
+            <div class="faq-item" style="background:rgba(201,168,76,0.05); border:1px solid rgba(201,168,76,0.15); border-radius:12px; padding:1.5rem; margin-bottom:1rem; cursor:pointer;" onclick="this.classList.toggle('active')">
+                <h3 style="color:var(--gold-light); font-size:1rem; margin-bottom:0.5rem;">❓ 如何預約參觀示範單位？</h3>
+                <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6; display:none;" class="faq-answer">歡迎透過 WhatsApp（8481 9473）預約參觀示範單位。我們地產專家將為您安排專屬參觀時段，並提供詳細樓盤介紹及售樓資料。</p>
+            </div>
+            
+            <div class="faq-item" style="background:rgba(201,168,76,0.05); border:1px solid rgba(201,168,76,0.15); border-radius:12px; padding:1.5rem; margin-bottom:1rem; cursor:pointer;" onclick="this.classList.toggle('active')">
+                <h3 style="color:var(--gold-light); font-size:1rem; margin-bottom:0.5rem;">❓ 芊御的關鍵日期（預計入伙日期）是什麼時候？</h3>
+                <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6; display:none;" class="faq-answer">芊御的預計關鍵日期為2027年5月17日。實際入伙日期以發展商及正式銷售文件最新公布為準。</p>
+            </div>
+        </div>
+        
+        <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const answer = this.querySelector('.faq-answer');
+                if (answer.style.display === 'none' || answer.style.display === '') {
+                    answer.style.display = 'block';
+                } else {
+                    answer.style.display = 'none';
+                }
+            });
+        });
+        </script>
     </div>
 </section>
 
