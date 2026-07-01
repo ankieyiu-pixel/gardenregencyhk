@@ -90,6 +90,15 @@
             font-weight: 700;
             letter-spacing: 0.1em;
             text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-logo-img {
+            height: 38px;
+            width: auto;
+            object-fit: contain;
+            display: block;
         }
 
         .nav-links { display: flex; gap: 1.5rem; list-style: none; }
@@ -111,6 +120,22 @@
             border-radius: 50px;
             font-weight: 600;
             font-size: 0.8rem !important;
+        }
+
+        /* ═══ HERO BANNER IMAGE ═══ */
+        .hero-banner {
+            width: 100%;
+            display: block;
+            line-height: 0;
+            margin-top: 56px;
+        }
+        .hero-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 280px;
+            object-fit: cover;
+            object-position: center;
         }
 
         /* ═══ HERO ═══ */
@@ -796,6 +821,9 @@
                 font-size: 0.95rem;
                 letter-spacing: 0.08em;
             }
+            .nav-logo-img { height: 30px; }
+            .hero-banner { margin-top: 0; }
+            .hero-banner img { max-height: 180px; }
             .nav-links {
                 gap: 0.35rem;
                 flex-wrap: wrap;
@@ -874,7 +902,9 @@
 
 <!-- ═══ NAV ═══ -->
 <nav>
-    <a href="#home" class="nav-logo">芊御 GARDEN REGENCY</a>
+    <a href="#home" class="nav-logo">
+        <img src="images/logo-tree.png" alt="Garden Regency 芊御" class="nav-logo-img">
+    </a>
     <ul class="nav-links">
         <li><a href="#gallery">相片</a></li>
         <li><a href="#keyfacts">資料</a></li>
@@ -885,6 +915,11 @@
         <li><a href="https://wa.me/85284819473?text=你好，我想預約睇芊御示範單位" class="nav-wa" target="_blank" rel="noopener">預約參觀示範單位</a></li>
     </ul>
 </nav>
+
+<!-- ═══ HERO BANNER ═══ -->
+<div class="hero-banner">
+    <img src="images/banner.png" alt="Garden Regency 芊御 — 元朗錦田低密度都會住宅">
+</div>
 
 <!-- ═══ HERO ═══ -->
 <section class="hero" id="home">
