@@ -31,6 +31,8 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="芊御 Garden Regency">
     <meta property="og:locale" content="zh_HK">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="樓市分析及買樓攻略 — 芊御 Garden Regency">
     <meta name="twitter:description" content="元朗錦田樓市分析及買樓攻略。芊御六大優勢 — 新鴻基發展、3.5米樓底、逾10.6萬呎會所。">
@@ -525,7 +527,7 @@
 <!-- ═══ NAV ═══ -->
 <nav>
     <a href="/" class="nav-logo">
-        <img src="images/logo-tree.png" alt="Garden Regency 芊御" class="nav-logo-img">
+        <img src="images/logo-tree.png" alt="Garden Regency 芊御" class="nav-logo-img" loading="lazy">
     </a>
     <ul class="nav-links">
         <li><a href="/">主頁</a></li>
@@ -537,6 +539,9 @@
 
 <!-- ═══ PAGE HEADER ═══ -->
 <header class="page-header">
+    <div class="breadcrumb" style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem;">
+        <a href="/" style="color:var(--text-muted); text-decoration:none;">主頁</a> <span style="color:var(--gold); margin:0 0.5rem;">›</span> <span style="color:var(--gold);">樓市分析</span>
+    </div>
     <div class="section-tag">MARKET INSIGHTS</div>
     <h1 class="section-title">樓市分析及買樓攻略</h1>
     <p class="section-desc">由我們地產專家為你分析元朗錦田樓市走勢、交通配套、首置及換樓策略，助你作出明智置業決定。</p>
@@ -552,7 +557,7 @@
         <div class="blog-grid">
 
             <!-- Article 1: 錦田樓市分析 -->
-            <article class="blog-card">
+            <article class="blog-card" id="article-1">
                 <div class="blog-card-header">
                     <span class="blog-card-icon">📊</span>
                     <div>
@@ -567,18 +572,23 @@
                     <h3>錦田樓市三大推動力</h3>
                     <ul>
                         <li><strong>北部都會區效應</strong> — 政府重點發展新界北，錦田鄰近落馬洲及規劃中的新田科技城，長線升值潛力可觀</li>
-                        <li><strong>交通配套成熟</strong> — 錦上路站連接屯馬線，大欖隧道直達九龍，30分鐘到西九龍核心區</li>
+                        <li><strong>交通配套成熟</strong> — 錦上路站連接屯馬線，大欖隧道直達九龍，30分鐘到西九龍核心區（詳見<a href="#article-4" style="color:var(--gold); text-decoration:underline;">芊御交通全攻略</a>及<a href="#article-5" style="color:var(--gold); text-decoration:underline;">三綫三站優勢</a>）</li>
                         <li><strong>低密度供應稀缺</strong> — 全港低密度住宅新供應有限，區內新盤如芊御受首置及換樓客熱捧</li>
                     </ul>
 
                     <div class="highlight-box">
                         <strong>💡 我們地產專家觀點：</strong>錦田現時樓價仍較元朗站一帶低水約 10-15%，但隨北部都會區基建陸續落成，兩地差距正逐步收窄。現階段入市錦田新盤，中長線升值潛力值得期待。
                     </div>
+
+                    <div class="related-articles" style="margin-top:1.5rem; padding:1rem; background:rgba(201,168,76,0.03); border-left:3px solid var(--gold); border-radius:4px;">
+                        <p style="font-size:0.85rem; color:var(--gold); font-weight:500; margin-bottom:0.5rem;">相關文章：</p>
+                        <p style="font-size:0.85rem; line-height:2;"><a href="#article-2" style="color:var(--text-light); text-decoration:underline;">首置上車攻略：2026年買新盤必讀指南</a> · <a href="#article-4" style="color:var(--text-light); text-decoration:underline;">芊御交通全攻略：22條路線速達港九新界</a> · <a href="#article-5" style="color:var(--text-light); text-decoration:underline;">三綫三站優勢解構</a></p>
+                    </div>
                 </div>
             </article>
 
             <!-- Article 2: 首置買樓攻略 -->
-            <article class="blog-card">
+            <article class="blog-card" id="article-2">
                 <div class="blog-card-header">
                     <span class="blog-card-icon">🏠</span>
                     <div>
@@ -588,7 +598,7 @@
                 </div>
                 <div class="blog-body">
                     <h3>第一步：計清自己預算</h3>
-                    <p>首置買家最重要係先了解自己負擔能力。一般銀行按揭最高可借樓價 70-90%（視乎物業價錢及入息）。以芊御兩房參考價為例，首期連雜費約需準備樓價之 15-25%。</p>
+                    <p>首置買家最重要係先了解自己負擔能力。一般銀行按揭最高可借樓價 70-90%（視乎物業價錢及入息）。以芊御兩房參考價為例（詳見<a href="price" style="color:var(--gold); text-decoration:underline;">芊御參考價單及平面圖</a>），首期連雜費約需準備樓價之 15-25%。</p>
 
                     <h3>第二步：揀啱付款方式</h3>
                     <ul>
@@ -603,11 +613,16 @@
                     <div class="highlight-box">
                         <strong>💡 我們地產專家貼士：</strong>首置買家記住預留約 3-5% 樓價作印花稅、律師費及雜費。芊御關鍵日期為 2027 年 5 月，屬樓花期約 10 個月，時間充裕。
                     </div>
+
+                    <div class="related-articles" style="margin-top:1.5rem; padding:1rem; background:rgba(201,168,76,0.03); border-left:3px solid var(--gold); border-radius:4px;">
+                        <p style="font-size:0.85rem; color:var(--gold); font-weight:500; margin-bottom:0.5rem;">相關文章：</p>
+                        <p style="font-size:0.85rem; line-height:2;"><a href="#article-1" style="color:var(--text-light); text-decoration:underline;">元朗錦田樓市分析 2026</a> · <a href="#article-3" style="color:var(--text-light); text-decoration:underline;">換樓升級攻略：點解芊御係家庭客首選？</a> · <a href="price" style="color:var(--text-light); text-decoration:underline;">芊御參考價單及平面圖</a></p>
+                    </div>
                 </div>
             </article>
 
             <!-- Article 3: 換樓攻略 -->
-            <article class="blog-card">
+            <article class="blog-card" id="article-3">
                 <div class="blog-card-header">
                     <span class="blog-card-icon">🔄</span>
                     <div>
@@ -629,11 +644,16 @@
                     <div class="highlight-box">
                         <strong>💡 我們地產專家建議：</strong>換樓家庭可考慮先沽出現有物業，以「先賣後買」方式換入芊御。現時市場流轉快，善用建築期付款可無縫交接，避免雙重住屋開支。
                     </div>
+
+                    <div class="related-articles" style="margin-top:1.5rem; padding:1rem; background:rgba(201,168,76,0.03); border-left:3px solid var(--gold); border-radius:4px;">
+                        <p style="font-size:0.85rem; color:var(--gold); font-weight:500; margin-bottom:0.5rem;">相關文章：</p>
+                        <p style="font-size:0.85rem; line-height:2;"><a href="#article-1" style="color:var(--text-light); text-decoration:underline;">元朗錦田樓市分析 2026</a> · <a href="#article-2" style="color:var(--text-light); text-decoration:underline;">首置上車攻略：2026年買新盤必讀指南</a> · <a href="#article-5" style="color:var(--text-light); text-decoration:underline;">三綫三站優勢解構</a></p>
+                    </div>
                 </div>
             </article>
 
             <!-- Article 4: 芊御交通全攻略 -->
-            <article class="blog-card">
+            <article class="blog-card" id="article-4">
                 <div class="blog-card-header">
                     <span class="blog-card-icon">🚌</span>
                     <div>
@@ -666,11 +686,16 @@
                     <div class="highlight-box">
                         <strong>💡 我們地產專家觀點：</strong>22條路線、4個站點，全部步行1-2分鐘即達，係錦田區交通最便捷嘅新盤之一。無論上班族去中環、家庭客去機場、定跨境客去皇崗，都唔使轉車太多次。WhatsApp 84819473 查詢芊御交通詳情。
                     </div>
+
+                    <div class="related-articles" style="margin-top:1.5rem; padding:1rem; background:rgba(201,168,76,0.03); border-left:3px solid var(--gold); border-radius:4px;">
+                        <p style="font-size:0.85rem; color:var(--gold); font-weight:500; margin-bottom:0.5rem;">相關文章：</p>
+                        <p style="font-size:0.85rem; line-height:2;"><a href="#article-5" style="color:var(--text-light); text-decoration:underline;">三綫三站優勢解構：屯馬綫・北環綫・中鐵綫</a> · <a href="#article-6" style="color:var(--text-light); text-decoration:underline;">由芊御出發：半小時生活圈直達港深機場</a> · <a href="#article-1" style="color:var(--text-light); text-decoration:underline;">元朗錦田樓市分析 2026</a></p>
+                    </div>
                 </div>
             </article>
 
             <!-- Article 5: 三綫三站優勢 -->
-            <article class="blog-card">
+            <article class="blog-card" id="article-5">
                 <div class="blog-card-header">
                     <span class="blog-card-icon">🚇</span>
                     <div>
@@ -701,11 +726,16 @@
                     </div>
 
                     <p style="font-size:0.8rem; color:var(--text-muted); margin-top:1rem;">註：北環綫及中鐵綫仍處於興建或規劃階段，其詳情（包括但不限於落實、位置、設計及竣工時間等）均以政府最終決定為準。於發展項目落成及入伙時可能尚未完成，落成後之詳情亦可能與本文章所述者不同。</p>
+
+                    <div class="related-articles" style="margin-top:1.5rem; padding:1rem; background:rgba(201,168,76,0.03); border-left:3px solid var(--gold); border-radius:4px;">
+                        <p style="font-size:0.85rem; color:var(--gold); font-weight:500; margin-bottom:0.5rem;">相關文章：</p>
+                        <p style="font-size:0.85rem; line-height:2;"><a href="#article-4" style="color:var(--text-light); text-decoration:underline;">芊御交通全攻略：22條路線速達港九新界</a> · <a href="#article-6" style="color:var(--text-light); text-decoration:underline;">由芊御出發：半小時生活圈直達港深機場</a> · <a href="#article-1" style="color:var(--text-light); text-decoration:underline;">元朗錦田樓市分析 2026</a></p>
+                    </div>
                 </div>
             </article>
 
             <!-- Article 6: 半小時生活圈 -->
-            <article class="blog-card">
+            <article class="blog-card" id="article-6">
                 <div class="blog-card-header">
                     <span class="blog-card-icon">✈️</span>
                     <div>
@@ -747,6 +777,11 @@
                     </div>
 
                     <p style="font-size:0.8rem; color:var(--text-muted); margin-top:1rem;">註：以上交通資料來源包括運輸署香港出行易、16seats.net、九巴及龍運網站、城巴網站、路政署官方網站（參考日期：2026年4-5月）。擬議中的路線於發展項目落成及入伙時可能尚未啟用，啟用後之詳情亦可能與本文章所述者不同。實際所需時間可能受交通及路面情況限制而有所不同。</p>
+
+                    <div class="related-articles" style="margin-top:1.5rem; padding:1rem; background:rgba(201,168,76,0.03); border-left:3px solid var(--gold); border-radius:4px;">
+                        <p style="font-size:0.85rem; color:var(--gold); font-weight:500; margin-bottom:0.5rem;">相關文章：</p>
+                        <p style="font-size:0.85rem; line-height:2;"><a href="#article-4" style="color:var(--text-light); text-decoration:underline;">芊御交通全攻略：22條路線速達港九新界</a> · <a href="#article-5" style="color:var(--text-light); text-decoration:underline;">三綫三站優勢解構：屯馬綫・北環綫・中鐵綫</a> · <a href="price" style="color:var(--text-light); text-decoration:underline;">芊御參考價單及平面圖</a></p>
+                    </div>
                 </div>
             </article>
 
