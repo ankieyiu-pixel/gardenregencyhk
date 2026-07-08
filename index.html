@@ -1021,6 +1021,80 @@
             .event-speakers { grid-template-columns: 1fr; }
             .event-section { padding: 3.5rem 1.25rem; }
         }
+    
+        /* ═══ BROCHURE SECTION ═══ */
+        .brochure-section {
+            background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .brochure-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+        .brochure-inner {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        .brochure-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .brochure-title {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+        .brochure-subtitle {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        .brochure-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+            color: var(--green-dark);
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(201,168,76,0.3);
+        }
+        .brochure-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(201,168,76,0.5);
+        }
+        .brochure-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+        .brochure-filesize {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 1rem;
+        }
+        @media (max-width: 768px) {
+            .brochure-title { font-size: 1.4rem; }
+            .brochure-btn { font-size: 1rem; padding: 0.8rem 2rem; }
+        }
+
     </style>
     <script type="application/ld+json">
     {
@@ -1326,7 +1400,8 @@
         <li><a href="#units">戶型</a></li>
         <li><a href="#showflats">示範單位</a></li>
         <li><a href="price">價單</a></li>
-        <li><a href="blog">樓市分析</a></li>
+        <li><a href="blog">樓市分析</a>
+            <a href="#brochure">售樓說明書</a></li>
         <li><a href="#seminar" style="color:var(--gold);">會員講座</a></li>
         <li><a href="https://wa.me/85284819473?text=你好，我想預約睇芊御示範單位" class="nav-wa" target="_blank" rel="nofollow noopener">預約參觀示範單位</a></li>
     </ul>
@@ -1771,6 +1846,28 @@
             認可人士：黃嘉敏 · 認可人士以其專業身份擔任經營人、董事或僱員的商號或法團：新鴻基建築設計有限公司 · 
             建築承建商：新輝建築有限公司 · 賣方就地產代理的委任：美聯物業 · 
             </p>
+    </div>
+</section>
+
+
+<!-- ═══ BROCHURE DOWNLOAD ═══ -->
+<section class="brochure-section" id="brochure">
+    <div class="brochure-inner">
+        <span class="brochure-icon">📘</span>
+        <h2 class="brochure-title">售樓說明書 PDF 下載</h2>
+        <p class="brochure-subtitle">
+            想要更詳細了解苊御 Garden Regency？<br>
+            完整售樓說明書包括項目詳情、單位平面圖、會所設施、地理位置及物業資料，隨時下載參閱。
+        </p>
+        <a href="/downloads/garden-regency-sales-brochure.pdf" 
+           class="brochure-btn" 
+           target="_blank" 
+           rel="noopener"
+           download>
+            <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            查看 / 下載售樓說明書
+        </a>
+        <p class="brochure-filesize">PDF 格式 · 約 14MB · 適合手機及電腦閱覽</p>
     </div>
 </section>
 
