@@ -26,9 +26,18 @@
     <meta name="robots" content="index, follow">
     <meta name="author" content="我們地產專家 · 屯門區地產代理">
     <link rel="canonical" href="https://gardenregencyhk.com/">
+    <link rel="icon" type="image/png" href="images/logo-tree.png">
+    <link rel="apple-touch-icon" href="images/logo-tree.png">
+    <meta name="theme-color" content="#0a1f12">
+    <meta name="application-name" content="芊御 Garden Regency">
+    <meta name="apple-mobile-web-app-title" content="芊御 Garden Regency">
+    <link rel="dns-prefetch" href="https://wa.me">
+    <link rel="preconnect" href="https://wa.me">
+    <link rel="preload" as="image" href="images/banner.png">
     <meta property="og:title" content="芊御 Garden Regency — 元朗錦田低密度奢華住宅 | 566伙">
     <meta property="og:description" content="新鴻基地產 · 3座14層 · 566伙 · 7月11日新地會×芊御會員置業專題講座 · WhatsApp 84819473 協助登記">
     <meta property="og:image" content="https://gardenregencyhk.com/images/00003029-PHOTO-2026-06-29-11-31-12.jpg">
+    <meta property="og:image:alt" content="芊御 Garden Regency 元朗錦田低密度住宅項目外觀">
     <meta property="og:url" content="https://gardenregencyhk.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="芊御 Garden Regency">
@@ -39,6 +48,7 @@
     <meta name="twitter:title" content="芊御 Garden Regency — 元朗錦田低密度奢華住宅">
     <meta name="twitter:description" content="新鴻基地產 · 566伙 · 7月11日新地會×芊御會員置業專題講座。WhatsApp 84819473 協助登記">
     <meta name="twitter:image" content="https://gardenregencyhk.com/images/00003029-PHOTO-2026-06-29-11-31-12.jpg">
+    <meta name="twitter:image:alt" content="芊御 Garden Regency 元朗錦田低密度住宅項目外觀">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -1308,7 +1318,7 @@
 <!-- ═══ NAV ═══ -->
 <nav>
     <a href="#home" class="nav-logo">
-        <img src="images/logo-tree.png" alt="Garden Regency 芊御" class="nav-logo-img" width="40" height="40">
+        <img src="images/logo-tree.png" alt="芊御 Garden Regency logo — 元朗錦田新鴻基地產低密度住宅" class="nav-logo-img" width="40" height="40">
     </a>
     <ul class="nav-links">
         <li><a href="#gallery">相片</a></li>
@@ -1324,7 +1334,7 @@
 
 <!-- ═══ HERO BANNER ═══ -->
 <div class="hero-banner">
-    <img src="images/banner.png" alt="Garden Regency 芊御 — 元朗錦田低密度都會住宅" width="1920" height="1080">
+    <img src="images/banner.png" alt="芊御 Garden Regency 示範單位 — 元朗錦田低密度住宅 ICC 62樓 WhatsApp預約睇樓" width="1920" height="1080" fetchpriority="high">
 </div>
 
 <!-- ═══ HERO ═══ -->
@@ -1438,7 +1448,7 @@
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox">
     <span class="lightbox-close" id="lightboxClose">&times;</span>
-    <img src="" alt="" id="lightboxImg">
+    <img src="" alt="芊御 Garden Regency 示範單位圖片放大查看" id="lightboxImg">
 </div>
 
 <!-- ═══ INLINE CTA ═══ -->
@@ -1682,11 +1692,11 @@
         <h2 class="section-title">佈局圖及平面圖</h2>
         <p class="section-desc">Garden Regency 芊御 — Master Layout Plan（MLP）及 Flat Mix 分佈。點擊圖片可放大查看。</p>
         <div class="layout-images">
-            <div class="layout-img-wrap" onclick="openLightbox('images/mlp_page1.jpg')">
+            <div class="layout-img-wrap" onclick="openLightbox('images/mlp_page1.jpg', '芊御 Garden Regency 元朗錦田 佈局圖 Master Layout Plan 第1頁')">
                 <img src="images/mlp_page1.jpg" alt="芊御 Garden Regency 元朗錦田 佈局圖 Master Layout Plan 第1頁" loading="lazy">
                 <div class="layout-label">📐 芊御 Garden Regency — 佈局圖（一）</div>
             </div>
-            <div class="layout-img-wrap" onclick="openLightbox('images/mlp_page2.jpg')">
+            <div class="layout-img-wrap" onclick="openLightbox('images/mlp_page2.jpg', '芊御 Garden Regency 元朗錦田 佈局圖 Master Layout Plan 第2頁')">
                 <img src="images/mlp_page2.jpg" alt="芊御 Garden Regency 元朗錦田 佈局圖 Master Layout Plan 第2頁" loading="lazy">
                 <div class="layout-label">📐 芊御 Garden Regency — 佈局圖（二）</div>
             </div>
@@ -1921,13 +1931,15 @@ galleryPhotos.forEach(photo => {
     const item = document.createElement('div');
     item.className = 'gallery-item';
     item.innerHTML = `<img src="${photo.src}" alt="${photo.caption}" loading="lazy"><div class="gallery-caption">${photo.caption}</div>`;
-    item.addEventListener('click', () => openLightbox(photo.src));
+    item.addEventListener('click', () => openLightbox(photo.src, photo.caption));
     galleryGrid.appendChild(item);
 });
 
 // ── Lightbox ──
-function openLightbox(src) {
-    document.getElementById('lightboxImg').src = src;
+function openLightbox(src, caption) {
+    const img = document.getElementById('lightboxImg');
+    img.src = src;
+    img.alt = caption || '芊御 Garden Regency 示範單位圖片';
     document.getElementById('lightbox').classList.add('active');
     document.body.style.overflow = 'hidden';
 }
