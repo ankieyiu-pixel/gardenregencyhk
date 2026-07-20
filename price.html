@@ -100,15 +100,38 @@
             font-size: 0.85rem;
             letter-spacing: 0.05em;
             transition: color 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.35;
         }
+
         .nav-links a:hover, .nav-links a.active { color: var(--gold); }
-        .nav-wa {
+        .nav-links a:hover .nav-en { color: var(--gold); opacity: 1; }
+
+        .nav-zh { display: block; font-size: 0.8rem; }
+        .nav-en { display: block; font-size: 0.6rem; opacity: 0.55; font-weight: 300; transition: all 0.3s; }
+
+        .nav-wa-circle {
             background: #25D366;
             color: white !important;
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.8rem !important;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem !important;
+            padding: 0 !important;
+            box-shadow: 0 2px 12px rgba(37,211,102,0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            flex-shrink: 0;
+        }
+        .nav-wa-circle:hover {
+            transform: scale(1.12);
+            box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+            color: white !important;
         }
 
         /* PAGE HEADER */
@@ -440,11 +463,11 @@
                 border-radius: 4px;
                 background: rgba(201,168,76,0.06);
             }
-            .nav-wa {
-                display: block; width: 100%;
-                text-align: center;
-                padding: 0.65rem 1rem;
-                font-size: 0.85rem !important;
+            .nav-wa-circle {
+                display: flex !important;
+                width: 38px;
+                height: 38px;
+                font-size: 1.1rem !important;
             }
             section { padding: 3rem 1.25rem; }
             .page-header { padding: 6rem 1.25rem 2.5rem; }
@@ -583,10 +606,10 @@
         <img src="images/logo-tree.png" alt="芊御 Garden Regency logo" class="nav-logo-img" loading="lazy">
     </a>
     <ul class="nav-links">
-        <li><a href="/">主頁 Home</a></li>
-        <li><a href="price" class="active">價單 Price</a></li>
-        <li><a href="blog">樓市分析 Blog</a></li>
-        <li><a href="https://wa.me/85284819473?text=你好，我想查詢芊御價單及付款詳情" class="nav-wa" target="_blank" rel="nofollow noopener">預約示範單位 Book Visit</a></li>
+        <li><a href="/"><span class="nav-zh">主頁</span><span class="nav-en">Home</span></a></li>
+        <li><a href="price" class="active"><span class="nav-zh">價單</span><span class="nav-en">Price</span></a></li>
+        <li><a href="blog"><span class="nav-zh">樓市分析</span><span class="nav-en">Blog</span></a></li>
+        <li><a href="https://wa.me/85284819473?text=你好，我想查詢芊御價單及付款詳情" class="nav-wa-circle" target="_blank" rel="nofollow noopener" aria-label="WhatsApp 預約">💬</a></li>
     </ul>
 </nav>
 
