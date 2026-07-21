@@ -136,24 +136,27 @@
         .nav-wa-circle {
             background: #25D366;
             color: white !important;
-            width: 42px;
-            height: 42px;
+            width: 62px;
+            height: 62px;
             border-radius: 50%;
             display: flex !important;
-            flex-direction: row !important;
+            flex-direction: column !important;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem !important;
             padding: 0 !important;
             box-shadow: 0 2px 12px rgba(37,211,102,0.3);
             transition: transform 0.3s, box-shadow 0.3s;
             flex-shrink: 0;
+            line-height: 1.25;
+            text-align: center;
         }
         .nav-wa-circle:hover {
-            transform: scale(1.12);
+            transform: scale(1.1);
             box-shadow: 0 4px 20px rgba(37,211,102,0.5);
             color: white !important;
         }
+        .nav-wa-circle .nav-wa-zh { font-size: 0.52rem; font-weight: 600; }
+        .nav-wa-circle .nav-wa-en { font-size: 0.42rem; opacity: 0.9; font-weight: 300; }
 
         /* ═══ HERO BANNER IMAGE ═══ */
         .hero-banner {
@@ -871,10 +874,11 @@
             }
             .nav-wa-circle {
                 display: flex !important;
-                width: 38px;
-                height: 38px;
-                font-size: 1.1rem !important;
+                width: 52px;
+                height: 52px;
             }
+            .nav-wa-circle .nav-wa-zh { font-size: 0.42rem; }
+            .nav-wa-circle .nav-wa-en { font-size: 0.34rem; }
             section { padding: 3.5rem 1.25rem; }
             .btn-group { flex-direction: column; align-items: center; }
             .btn-wa, .btn-outline { width: 100%; justify-content: center; }
@@ -1207,7 +1211,7 @@
         <li><a href="#brochure"><span class="nav-zh">售樓書</span><span class="nav-en">Brochure</span></a></li>
         <li><a href="#floorplan"><span class="nav-zh">平面圖</span><span class="nav-en">Floor Plan</span></a></li>
         <li><a href="#fullguide"><span class="nav-zh">全圖攻略</span><span class="nav-en">Guide</span></a></li>
-        <li><a href="https://wa.me/85284819473?text=你好，我想預約睇芊御示範單位" class="nav-wa-circle" target="_blank" rel="nofollow noopener" aria-label="WhatsApp 預約">💬</a></li>
+        <li><a href="https://wa.me/85284819473?text=你好，我想預約睇芊御示範單位" class="nav-wa-circle" target="_blank" rel="nofollow noopener" aria-label="WhatsApp 預約"><span class="nav-wa-zh">預約睇示位</span><span class="nav-wa-en">Book a visit</span></a></li>
     </ul>
 </nav>
 
