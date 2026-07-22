@@ -1,7 +1,70 @@
 [build]
   publish = "."
 
-# Clean URL rewrites (serve .html without extension)
+# ═══ SECURITY HEADERS ═══
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    X-XSS-Protection = "1; mode=block"
+
+# ═══ CACHING HEADERS ═══
+# Static assets (images, fonts, CSS, JS) — cache aggressively
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/downloads/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML pages — short cache, revalidate
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# ═══ CLEAN URL REWRITES ═══
 [[redirects]]
   from = "/blog"
   to = "/blog.html"
@@ -11,6 +74,19 @@
   from = "/price"
   to = "/price.html"
   status = 200
+
+# ═══ WWW to NON-WWW REDIRECT ═══
+[[redirects]]
+  from = "https://www.gardenregencyhk.com/*"
+  to = "https://gardenregencyhk.com/:splat"
+  status = 301
+  force = true
+
+# ═══ TRAILING SLASH REDIRECT ═══
+[[redirects]]
+  from = "https://gardenregencyhk.com/:path/"
+  to = "https://gardenregencyhk.com/:path"
+  status = 301
 
 # 404 page for all non-existent URLs
 [[redirects]]
